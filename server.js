@@ -1,15 +1,11 @@
-// var atatus = require("atatus-nodejs");
-
-// atatus.start({
-//   licenseKey: "lic_apm_aecd5ae2c88c4f14a3ac92d1e6833608",
-//   appName: "nodetcp",
-// });
-// This line must come before importing any instrumented module.
-const tracer = require('dd-trace').init()
-
 const net = require("net");
 const { MongoClient } = require("mongodb");
+var atatus = require("atatus-nodejs");
 
+atatus.start({
+  licenseKey: "lic_apm_aecd5ae2c88c4f14a3ac92d1e6833608",
+  appName: "nodetcp",
+});
 const MONGO_URI = "mongodb://localhost:27017/auth"; // Replace with your MongoDB URI if needed
 const DATABASE_NAME = "admin";
 const COLLECTION_NAME = "items";

@@ -5,8 +5,6 @@
   },
   "dependencies": {
     "atatus-nodejs": "^3.1.2",
-    "dd-trace": "^5.31.0",
-    "hot-shots": "^10.2.1",
     "mongodb": "^6.12.0"
   },
   "name": "tcp",
